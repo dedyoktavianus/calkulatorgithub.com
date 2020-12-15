@@ -56,6 +56,18 @@ function calculate(firstOperand, secondOperand, operator) {
     }
     return secondOperand;
 }
+function pangkatdua(){
+    calculator.displayValue = Math.pow(calculator.displayValue,2);
+}
+function sin(){
+	calculator.displayValue = Math.sin(calculator.displayValue);
+}
+function cos(){
+	calculator.displayValue = Math.cos(calculator.displayValue);
+}
+function tan(){
+	calculator.displayValue = Math.tan(calculator.displayValue);
+}
 
 function resetCalculator() {
     calculator.displayValue = '0';
@@ -83,6 +95,10 @@ keys.addEventListener('click', Event => {
     case '*' :
     case '/' :
     case '=' :
+    case 'sin' :
+    case 'cos' :
+    case 'tan' :
+    case 'x' :
     handleOperator(value);
     break;
     case '.' :
